@@ -48,7 +48,6 @@ build:
     - sqlite3 --version
     - psql --version
     - redis-server --version
-    - riak version
     - dpkg -s rabbitmq-server | grep Version
     #- yum list rabbitmq-server | grep rabbitmq-serve #for c7all rabbitmq version
     - mongod --version
