@@ -7,7 +7,7 @@ services:
   - neo4j #3.3.1
   - memcached #1.5.4
   - mongodb #3.6.2
-  #- mysql #5.7.20
+  - mysql #5.7.20
   - postgres #10
   - rabbitmq #3.6.14
   - redis #4.0.8
@@ -54,8 +54,7 @@ build:
     - mongod --version
     - elasticsearch --version
     - sleep 5
-    - curl http://127.0.0.1:5984
-   # - pip show pycrypto    
+    - curl http://127.0.0.1:5984  
     - docker pull shippabledocker/sample_node_pvt:ecr
     
 integrations:
@@ -64,4 +63,3 @@ integrations:
  #Docker integration
     - integrationName: ship-docker
       type: dockerRegistryLogin
-   
